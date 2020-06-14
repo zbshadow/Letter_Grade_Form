@@ -17,24 +17,39 @@ namespace CalculateLetterGrade
             InitializeComponent();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void BtnCalculate_Click(object sender, EventArgs e)
         {
+            decimal numberGrade = Convert.ToDecimal(txtNumberGrade.Text);
+            string letterGrade = "";
 
+            if (numberGrade >= 88)
+            {
+                letterGrade = "A";
+            }
+            else if (numberGrade >= 80 && numberGrade <= 87)
+            {
+                letterGrade = "B";
+            }
+            else if (numberGrade >= 68 && numberGrade <= 79)
+            {
+                letterGrade = "C";
+            }
+            else if (numberGrade >= 60 && numberGrade <= 67)
+            {
+                letterGrade = "D";
+            }
+            else
+            {
+                letterGrade = "F";
+            }
+
+            txtLetterGrade.Text = letterGrade;
+            txtNumberGrade.Focus();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtLetterGrade_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

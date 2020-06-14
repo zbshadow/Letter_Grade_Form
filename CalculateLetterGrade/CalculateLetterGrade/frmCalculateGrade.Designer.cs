@@ -44,6 +44,7 @@
             this.btnCalculate.TabIndex = 2;
             this.btnCalculate.Text = "&Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // btnExit
             // 
@@ -54,6 +55,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // txtNumberGrade
             // 
@@ -70,7 +72,6 @@
             this.txtLetterGrade.Size = new System.Drawing.Size(52, 20);
             this.txtLetterGrade.TabIndex = 3;
             this.txtLetterGrade.TabStop = false;
-            this.txtLetterGrade.TextChanged += new System.EventHandler(this.TxtLetterGrade_TextChanged);
             // 
             // label1
             // 
@@ -81,7 +82,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "&Number grade:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -92,9 +92,8 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Letter grade:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
-            // Form1
+            // frmCalculateGrade
             // 
             this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,10 +106,9 @@
             this.Controls.Add(this.txtNumberGrade);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
-            this.Name = "Form1";
+            this.Name = "frmCalculateGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculate Letter Grade";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
